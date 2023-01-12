@@ -28,11 +28,11 @@ user5 = User.create(name: Faker::Name.name, email:Faker::Internet.email, passwor
 
 #make 5 Arts
 puts "Creating Arts..."
-arts1 = Art.create(image_url: "", title: "The Awakening", description: "The Awakening inspired by", price: Faker::Commerce.price)
-arts2 = Art.create(image_url: "", title: "The Potrait", description: "The Potrait inspired by", price: Faker::Commerce.price)
-arts3 = Art.create(image_url: "", title: "The Mystery", description: "The Mystery inspired by", price: Faker::Commerce.price)
-arts4 = Art.create(image_url: "", title: "The Culture", description: "The Culture inspired by The African continent.", price: Faker::Commerce.price)
-arts5 = Art.create(image_url: "", title: "The Guide", description: "The Guide inspired by", price: Faker::Commerce.price)
+arts1 = Art.create(image_url: "https://www.voicesofyouth.org/sites/voy/files/images/2020-07/zeekmystories_1.jpg", title: "The Awakening", description: "The Awakening inspired by", price: Faker::Commerce.price)
+arts2 = Art.create(image_url: "https://www.voicesofyouth.org/sites/voy/files/images/2020-07/zeekmystories_1.jpg", title: "The Potrait", description: "The Potrait inspired by", price: Faker::Commerce.price)
+arts3 = Art.create(image_url: "https://www.voicesofyouth.org/sites/voy/files/images/2020-07/zeekmystories_1.jpg", title: "The Mystery", description: "The Mystery inspired by", price: Faker::Commerce.price)
+arts4 = Art.create(image_url: "https://www.voicesofyouth.org/sites/voy/files/images/2020-07/zeekmystories_1.jpg", title: "The Culture", description: "The Culture inspired by The African continent.", price: Faker::Commerce.price)
+arts5 = Art.create(image_url: "https://www.voicesofyouth.org/sites/voy/files/images/2020-07/zeekmystories_1.jpg", title: "The Guide", description: "The Guide inspired by", price: Faker::Commerce.price)
 
 puts "Creating Review..."
 reviews1 = Review.create(comment: "Great Inspiration.", name: Faker::Name.name, photo_url: "https://i.pinimg.com/236x/87/42/31/8742315158e5de302ae9c5a2f9bee233.jpg")
