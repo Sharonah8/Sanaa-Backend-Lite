@@ -9,18 +9,22 @@
 puts "🌱 Seeding begins here...."
 
 puts "Deleting old data..."
-Feedback.destroy_all
+Review.destroy_all
 User.destroy_all
 Art.destroy_all
 
 # Seed your database here
-#make 10 users
+#make 5 users
 puts "Creating users..."
-user1 = User.create(name: Faker::Name.name)
-user2 = User.create(name: Faker::Name.name)
-user3 = User.create(name: Faker::Name.name)
-user4 = User.create(name: Faker::Name.name)
-user5 = User.create(name: Faker::Name.name)
+user1 = User.create(name: Faker::Name.name, email:Faker::Internet.email, password_digest:Faker::Internet.password)
+user2 = User.create(name: Faker::Name.name, email:Faker::Internet.email, password_digest:Faker::Internet.password)
+user3 = User.create(name: Faker::Name.name, email:Faker::Internet.email, password_digest:Faker::Internet.password)
+user4 = User.create(name: Faker::Name.name, email:Faker::Internet.email, password_digest:Faker::Internet.password)
+user5 = User.create(name: Faker::Name.name, email:Faker::Internet.email, password_digest:Faker::Internet.password)
+
+# 5.times do |i|
+#     User.create(name:Faker::Name.name, email:Faker::Internet.email, password_digest:Faker::Internet.password)
+# end
 
 #make 5 Arts
 puts "Creating Arts..."
@@ -30,12 +34,25 @@ arts3 = Art.create(image_url: "", title: "The Mystery", description: "The Myster
 arts4 = Art.create(image_url: "", title: "The Culture", description: "The Culture inspired by The African continent.", price: Faker::Commerce.price)
 arts5 = Art.create(image_url: "", title: "The Guide", description: "The Guide inspired by", price: Faker::Commerce.price)
 
-puts "Creating Feedbacks..."
-feedbacks1 = Feedback.create(comment: "Great Inspiration.", name: Faker::Name.name, photo_url: "https://i.pinimg.com/236x/87/42/31/8742315158e5de302ae9c5a2f9bee233.jpg", booking_id: booking3.id, user_id: user2.id)
-feedbacks2 = Feedback.create(comment: "My Favourite!", name: Faker::Name.name, photo_url: "https://i.pinimg.com/236x/87/42/31/8742315158e5de302ae9c5a2f9bee233.jpg", booking_id: booking1.id, user_id: user1.id)
-feedbacks3 = Feedback.create(comment: "So much going behind this.", name: Faker::Name.name, photo_url: "https://i.pinimg.com/236x/87/42/31/8742315158e5de302ae9c5a2f9bee233.jpg", booking_id: booking1.id, user_id: user1.id)
-feedbacks4 = Feedback.create(comment: "Take me back to the roots.", name: Faker::Name.name, photo_url: "https://i.pinimg.com/236x/87/42/31/8742315158e5de302ae9c5a2f9bee233.jpg", booking_id: booking2.id, user_id: user4.id)
-feedbacks5 = Feedback.create(comment: "This is creative.", name: Faker::Name.name, photo_url: "https://i.pinimg.com/236x/87/42/31/8742315158e5de302ae9c5a2f9bee233.jpg", booking_id: booking5.id, user_id: user3.id)
+puts "Creating Review..."
+reviews1 = Review.create(comment: "Great Inspiration.", name: Faker::Name.name, photo_url: "https://i.pinimg.com/236x/87/42/31/8742315158e5de302ae9c5a2f9bee233.jpg")
+reviews2 = Review.create(comment: "My Favourite!", name: Faker::Name.name, photo_url: "https://i.pinimg.com/236x/87/42/31/8742315158e5de302ae9c5a2f9bee233.jpg")
+reviews3 = Review.create(comment: "So much going behind this.", name: Faker::Name.name, photo_url: "https://i.pinimg.com/236x/87/42/31/8742315158e5de302ae9c5a2f9bee233.jpg")
+reviews4 = Review.create(comment: "Take me back to the roots.", name: Faker::Name.name, photo_url: "https://i.pinimg.com/236x/87/42/31/8742315158e5de302ae9c5a2f9bee233.jpg")
+reviews5 = Review.create(comment: "This is creative.", name: Faker::Name.name, photo_url: "https://i.pinimg.com/236x/87/42/31/8742315158e5de302ae9c5a2f9bee233.jpg")
 
 puts "✅ Done seeding!"
+
+
+
+# 5.times do |i|
+#     User.create(name:Faker::Name.name, email:Faker::Internet.email, password_digest:Faker::Internet.password)
+#     3.times do
+#         Art.create(user_id: i, image_url: "", name_or_title:Faker::Art.title, description: "The Mystery inspired by",price: Faker::Commerce.price )
+#         end
+#     5.times do |j|
+#         Review.create(comment: "This is creative.", name: Faker::Name.name, photo_url: "https://i.pinimg.com/236x/87/42/31/8742315158e5de302ae9c5a2f9bee233.jpg")
+#         end
+#     end
+# end
 
