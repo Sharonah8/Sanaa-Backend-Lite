@@ -10,7 +10,7 @@ class ArtPiecesController < ApplicationController
   end
 
   def create
-    artpiece = ArtPiece.create!(artpieces_params, recruiter_id: 1)
+    artpiece = ArtPiece.create!(art_pieces_params)
     render json: artpiece, status: :created
   end
 
