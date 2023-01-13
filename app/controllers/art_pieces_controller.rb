@@ -29,7 +29,7 @@ class ArtPiecesController < ApplicationController
   private
 
   def art_pieces_params
-    params.permit(:image_url, :title, :description)
+    params.permit(:image_url, :title, :description, :price, :user_id, :review_id)
   end
 
   def find_artpiece
