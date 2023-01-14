@@ -5,9 +5,9 @@ class Review < ApplicationRecord
     validates :comment, presence: true
     validates :user, presence: true
     validates :art_piece, presence: true
-    validates :user, uniqueness: { scope: :art_piece_id }
-    validates :art_piece, uniqueness: { scope: :user_id }
-    
+    validates :comment, length: { minimum: 12 }
+
+
 
     
 end
