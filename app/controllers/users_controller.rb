@@ -1,4 +1,7 @@
 class UsersController < ApplicationController
+
+    skip_before_action :authenticate_request, only: [:create, :index]
+
     def index
         users = User.all
         render json: users, only: [:username, :email, :password], status: :accepted
@@ -8,10 +11,12 @@ class UsersController < ApplicationController
     
     def create
         user = User.create!(user_params)
-        render json: user, status: :created
-        # add condition for user creation
-        # render a json response
-        # unprocessable entity response
+        if user
+            token = jwt_encode(user_id: user.id)
+            render json: user, status: :created
+        else
+            render json: {error: "Invalid user"}, status: :unprocessable_entity
+        end
     end
 
     def update
