@@ -1,5 +1,5 @@
 class SessionsController < ApplicationController
-  before_action :authenticate_request, except: :create
+  skip_before_action :authenticate_request, only: [:create]
 
   # POST /auth/login
   def create
