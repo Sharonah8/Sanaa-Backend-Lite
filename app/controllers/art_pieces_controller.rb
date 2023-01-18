@@ -1,9 +1,14 @@
 class ArtPiecesController < ApplicationController
+  # add rescue
+  # rescue_from ActiveRecord::RecordNotFound, with: :render_not_found
+
+  before_action :authenticate_request
+
   def index
     artpieces = ArtPiece.all
     render json: artpieces
   end
-
+  
   def show
     artpiece = find_artpiece
     render json: artpiece
