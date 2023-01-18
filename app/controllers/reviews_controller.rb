@@ -16,6 +16,6 @@ class ReviewsController < ApplicationController
 
   private
   def review_params
-    params.permit(:comment, :name, :image_url)
+    params.permit(:comment, :name, :image_url, :user_id, :art_piece_id)
   end
 end
