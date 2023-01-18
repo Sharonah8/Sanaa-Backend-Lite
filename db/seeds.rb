@@ -24,7 +24,7 @@ user1 = User.create!(username: Faker::Name.name, email:"sanaa_art@gmail.com", pa
 
 #make 5 Arts
 puts "Creating Arts..."
-arts1 = ArtPiece.create!(image_url: "eee", title: "The Awakening", description: "The Awakening inspired by", price: Faker::Commerce.price)
+arts1 = ArtPiece.create!(image_url: "eee", title: "The Awakening", description: "The Awakening inspired by", price: 100)
 # arts2 = ArtPiece.create(image_url: "", title: "The Potrait", description: "The Potrait inspired by", price: Faker::Commerce.price)
 # arts3 = ArtPiece.create(image_url: "", title: "The Mystery", description: "The Mystery inspired by", price: Faker::Commerce.price)
 # arts4 = ArtPiece.create(image_url: "", title: "The Culture", description: "The Culture inspired by The African continent.", price: Faker::Commerce.price)

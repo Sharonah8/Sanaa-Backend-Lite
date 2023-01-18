@@ -8,8 +8,8 @@ class ArtPiece < ApplicationRecord
     
     # validation of the price to be a number
     validates :price, numericality: { only_integer: true }
-    validates :title, length: { maximum: 10 }
-    validates :description, length: { maximum: 12 }
-
+    validates :title, length: { maximum: 20 }
+    validates :description, length: { maximum: 50 }
+    
 end
 
