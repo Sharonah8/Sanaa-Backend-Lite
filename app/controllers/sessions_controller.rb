@@ -18,5 +18,10 @@ class SessionsController < ApplicationController
       render json: { error: 'unauthorized' }, status: :unauthorized
     end
   end
+
+  def destroy
+    reset_session
+    # redirect_to '/'
+  end
   
   end
