@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
 
-  skip_before_action :authenticate_request, only: [:create, :index]
+  # skip_before_action :authenticate_request, only: [:create, :index]
 
   def index
     users = User.all
@@ -15,6 +15,15 @@ class UsersController < ApplicationController
     else
       render json: { error: "Invalid user" }, status: :unprocessable_entity
     end
+  end
+ 
+  def show 
+    if current_user 
+      render json: current_user
+    else
+      render json: {error: "Invalid user"}, status: :unauthorized
+    end
+    
   end
 
   def update

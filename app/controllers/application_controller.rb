@@ -1,15 +1,21 @@
 class ApplicationController < ActionController::API
   include JsonWebToken
 
-  before_action :authenticate_request
+  # before_action :authenticate_request
 
-  private
+  # private
   
-  def authenticate_request
+  def current_user
     header = request.headers["Authorization"]
     header = header.split(" ").last if header
     decoded = jwt_decode(header)
-    @current_user = decoded ? User.find(decoded[:user_id]) : nil
-    render json: { message: 'Please sign in' }, status: :unauthorized unless decoded
+    @user = decoded ? User.find(decoded[:user_id]) : nil
+  end
+
+
+  def authenticate_request
+    
+    render json: { message: 'Please sign in' }, status: :unauthorized unless current_user
+
   end
 end
