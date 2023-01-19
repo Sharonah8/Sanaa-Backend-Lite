@@ -40,12 +40,11 @@ arts9 = ArtPiece.create!(image_url: "https://cdn20.pamono.com/p/s/1/2/1273119_0l
 # arts5 = ArtPiece.create(image_url: "", title: "The Guide", description: "The Guide inspired by", price: Faker::Commerce.price)
 
 puts "Creating Review..."
-reviews1 = Review.create!(comment: "Great Inspiration.", name: Faker::Name.name, image_url: "https://i.pinimg.com/236x/87/42/31/8742315158e5de302ae9c5a2f9bee233.jpg", user_id:1, art_piece_id: 1)
-# reviews2 = Review.create!(comment: "My Favourite!", name: Faker::Name.name, image_url: "https://i.pinimg.com/236x/87/42/31/8742315158e5de302ae9c5a2f9bee233.jpg")
-# reviews3 = Review.create!(comment: "So much going behind this.", name: Faker::Name.name, image_url: "https://i.pinimg.com/236x/87/42/31/8742315158e5de302ae9c5a2f9bee233.jpg")
-# reviews4 = Review.create!(comment: "Take me back to the roots.", name: Faker::Name.name, image_url: "https://i.pinimg.com/236x/87/42/31/8742315158e5de302ae9c5a2f9bee233.jpg")
-# reviews5 = Review.create!(comment: "This is creative.", name: Faker::Name.name, image_url: "https://i.pinimg.com/236x/87/42/31/8742315158e5de302ae9c5a2f9bee233.jpg")
-
+reviews1 = Review.create!(comment: "Great Inspiration.", name: Faker::Name.name, image_url: "https://i.postimg.cc/SNXhBGBP/Sanaa-logo-a-better-world-through-creativity-200w.png", user_id:1, art_piece_id: 1)
+reviews2 = Review.create!(comment: "My Favourite!", name: Faker::Name.name, image_url: "https://i.postimg.cc/SNXhBGBP/Sanaa-logo-a-better-world-through-creativity-200w.png", user_id:1, art_piece_id: 3)
+reviews3 = Review.create!(comment: "Amazing Platform", name: Faker::Name.name, image_url: "https://i.postimg.cc/SNXhBGBP/Sanaa-logo-a-better-world-through-creativity-200w.png", user_id:1, art_piece_id: 5)
+reviews4 = Review.create!(comment: "Pure Creativity.", name: Faker::Name.name, image_url: "https://i.postimg.cc/SNXhBGBP/Sanaa-logo-a-better-world-through-creativity-200w.png", user_id:1, art_piece_id: 3)
+# reviews5 = Review.create!(comment: "This is creative.", name: Faker::Name.name, image_url: "https://i.postimg.cc/SNXhBGBP/Sanaa-logo-a-better-world-through-creativity-200w.png", user_id:1, art_piece_id: 7)
 puts "✅ Done seeding!"
 
 
