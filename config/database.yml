@@ -12,18 +12,19 @@ default: &default
 
 development:
   <<: *default
-  database: db/development.sqlite3
+  database: sanaa-backend-lite_development
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
-test:
-  <<: *default
-  database: db/test.sqlite3
+
+# test:
+#   <<: *default
+#   database: db/test.sqlite3
 
 production:
   <<: *default
-  url: <%= ENV['DATABASE_URL'] %>
-  database: mysite_production
+  url: <%= ENV['postgresql://${{ PGUSER }}:${{ PGPASSWORD }}@${{ PGHOST }}:${{ PGPORT }}/${{ PGDATABASE }}'] %>
+  database: sanaa-backend-lite_production
   username: mysite
   password: <%= ENV['MYSITE_DATABASE_PASSWORD'] %>
